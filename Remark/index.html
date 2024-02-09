@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      /* Slideshow styles */
+    </style>
+  </head>
+  <body>
+     <textarea id="source">    
+      <!-- Slideshow Markdown -->
+      # Slide 1
+      ```c
+        /* USER CODE BEGIN APP_BLE_Init_2 */
+        if (status != BLE_STATUS_SUCCESS) {
+            return;
+        }
+      ```
+      ???
+      Slide 1 notes<br>
+      Pressing P will toggle presenter mode.
+      ---
+      
+      # Slide 2
+      This is slide 2
+      ```javascript
+        function add(a, b)
+        return a + b
+        end
+      ```
+
+    </textarea>
+     <script src="remark-latest.min.js">
+    </script>
+    <script>
+       var slideshow = remark.create();
+    </script>
+  </body>
+</html>
+<!-- https://remarkjs.com/ -->
