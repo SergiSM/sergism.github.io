@@ -37,6 +37,50 @@ $('#remota').DataTable({
                 }
             });     
         });
+
+
+/*
+$('#example').DataTable({
+                "ajax": {
+                    "url": "http://192.168.13.101/__iot/taula_iot.json", 
+                    "dataSrc": "" 
+                },
+                "columns": [
+                    { "data": "deviceId" },
+                    { "data": "status" },
+                    { "data": "firmware" },
+                    { "data": "pi4" },
+                    { "data": "pi5" },
+                    { "data": "productId" },
+                    { "data": "pi10" },                                        
+                    { "data": "reg_date" },
+                    { "data": "ultim" },
+                    { "data": "hores_off" },
+                    { "data": "codi_error" }
+                ],
+                "columnDefs": [
+                    {"className": "dt-center", "targets": [2, 5, 6, 9, 10]}  // {"className": "dt-center", "targets": "_all"}
+                ],
+                rowCallback: function (row, data) {
+                    $('td:eq(0)', row).html('<a target=_blank href="https:/axax.net/api/v1/Devices/'+ data.deviceId +'/lastValues">' + data.deviceId + '</a>');
+                    $('td:eq(10)', row).html('<a target=_blank href="https:/axax.net/api/v1/Devices/'+ data.deviceId +'/info">' + data.codi_error + '</a>');
+                    if (data.status == 'Device is Connected') {
+                        $('td', row).css('background-color', '#c6f68d');
+                        //$('td:eq(4)', row).html('<b>A</b>');
+                    }
+                    if (data.status == 'Device is Disconnected') 
+                        $('td', row).css('background-color', '#E0E0E0');
+                    if (data.status == 'Device is not registered') 
+                        $('td', row).css('background-color', '#FFFFFF');
+                }
+            });            
+
+            var table = $('#example').DataTable();
+            $('#searchButton').on('click', function() {
+                table.search('"Device is Connected"').draw();
+            });
+	*/
+	
     </script>
 
 </body>
