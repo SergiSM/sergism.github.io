@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taula IoT</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <style> body {font-family: Verdana, Geneva, Tahoma, sans-serif;} </style>
+</head>
+<body>
+  
+<table id="remota" class="display cell-border compact stripe" style="width:100%">
+        <thead>
+            <tr style="color:gray">
+				<th>ID</th>
+            </tr>
+        </thead>
+    </table>
+
+<script>
+        $(document).ready(function() {
+          
+$('#remota').DataTable({
+                "ajax": {
+                    "url": "https://raw.githubusercontent.com/SergiSM/sergism.github.io/refs/heads/master/prova.json", 
+                    "dataSrc": "" 
+                },
+                "columns": [
+                    { "data": "c1" }
+                ],
+                "columnDefs": [
+                    {"className": "dt-center",  "targets": "_all"}  // {"className": "dt-center", "targets": "_all"}
+                ],
+                rowCallback: function (row, data) {
+                }
+            });     
+        });
+    </script>
+
+</body>
+</html>
